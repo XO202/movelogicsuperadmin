@@ -1,0 +1,21 @@
+.custom-tooltip {
+    background: #161d2e;
+    border: 1px solid #1e2535;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+  
+  .tooltip-label {
+    color: #8b95a8;
+    margin-bottom: 6px;
+  }
+  
+  .tooltip-item {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .tooltip-value {
+    font-weight: 600;
+  }

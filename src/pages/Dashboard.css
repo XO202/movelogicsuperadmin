@@ -1,0 +1,253 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #0b0f1a;
+  font-family: "Inter", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  color: #e2e8f0;
+}
+
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+}
+
+/* Topbar */
+
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  color: #8c95a6;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.date-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111827;
+  border: 1px solid #1e2535;
+  color: #c9d1db;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+/* Stats */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+} 
+/* Tablet */
+/* =========================================================
+   DATE RANGE DROPDOWN
+========================================================= */
+
+.date-filter-wrapper {
+  position: relative;
+}
+
+.date-range-dropdown {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 320px;
+
+  background: #111827;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  z-index: 100;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+}
+
+.date-range-header {
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 16px;
+}
+
+.date-range-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.date-field label {
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.date-field input {
+  height: 44px;
+
+  background: #0f172a;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 10px;
+
+  padding: 0 12px;
+
+  color: #e2e8f0;
+
+  outline: none;
+}
+
+.date-field input:focus {
+  border-color: #22d3ee;
+}
+
+.date-range-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.date-cancel-btn,
+.date-apply-btn {
+  height: 40px;
+
+  padding: 0 18px;
+
+  border-radius: 10px;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.date-cancel-btn {
+  background: #1e293b;
+
+  color: #cbd5e1;
+}
+
+.date-apply-btn {
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #22d3ee
+  );
+
+  color: #0f172a;
+}
+
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Chart */
+
+.chart-card {
+  background: #111827;
+  border: 1px solid #1e2535;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chart-filter {
+  background: #161d2e;
+  border: 1px solid #1e2535;
+  color: #c9d1db;
+  font-size: 13px;
+  border-radius: 7px;
+  padding: 5px 28px 5px 12px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238c95a6' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.date-filter-wrapper {
+  position: relative;
+}
+
+.date-range-picker-dropdown {
+  position: absolute;
+
+  top: calc(100% + 12px);
+  right: 0;
+
+  z-index: 100;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.4);
+}

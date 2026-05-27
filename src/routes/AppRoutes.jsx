@@ -1,0 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Dashboard from "../pages/Dashboard";
+import PartnersList from "../pages/PartnersList";
+import PartnerDetails from "../pages/PartnerDetails";
+import CreatePartner from "../pages/CreatePartner";
+function AppRoutes() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/partners" element={<PartnersList />} />
+        <Route path="/partners/details" element={<PartnerDetails />} />
+        <Route path="/partners/create" element={<CreatePartner />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default AppRoutes;
