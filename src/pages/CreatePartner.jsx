@@ -97,17 +97,18 @@ export default function CreatePartner() {
   const [status, setStatus] =
     useState("Active");
 
-  const [form, setForm] = useState({
-    companyName: "",
-    businessEmail: "",
-    businessPhone: "",
-    businessAddress: "",
-    adminName: "",
-    adminEmail: "",
-    password: "",
-    confirmPassword: "",
-    subdomain: "",
-  });
+    const [form, setForm] = useState({
+      companyName: "",
+      businessEmail: "",
+      businessPhone: "",
+      businessAddress: "",
+      adminName: "",
+      adminEmail: "",
+      password: "",
+      confirmPassword: "",
+      subdomain: "",
+      countryCode: "+1",
+    });
 
   const set =
     (key) => (e) =>
@@ -206,27 +207,45 @@ export default function CreatePartner() {
             {/* PHONE */}
 
             <Field label="Business Phone">
-              <div className="cp-phone-wrapper">
-                <button className="cp-phone-flag">
-                  <USFlag />
+  <div className="cp-phone-wrapper">
+    {/* COUNTRY SELECT */}
 
-                  <IconChevronDown />
-                </button>
+    <div className="cp-country-select-wrapper">
+      <select
+        className="cp-country-select"
+        value={form.countryCode}
+        onChange={set("countryCode")}
+      >
+        <option value="+1">
+          🇺🇸 US (+1)
+        </option>
 
-                <div className="cp-country-code">
-                  +1
-                </div>
+        <option value="+61">
+          🇦🇺 Aus (+61)
+        </option>
 
-                <input
-                  className="cp-phone-input"
-                  placeholder="(555) 123-4567"
-                  value={form.businessPhone}
-                  onChange={set(
-                    "businessPhone"
-                  )}
-                />
-              </div>
-            </Field>
+        <option value="+64">
+          🇳🇿 NZ (+64)
+        </option>
+      </select>
+
+      <div className="cp-country-chevron">
+        <IconChevronDown />
+      </div>
+    </div>
+
+    {/* PHONE INPUT */}
+
+    <input
+      className="cp-phone-input"
+      placeholder="Enter phone number"
+      value={form.businessPhone}
+      onChange={set(
+        "businessPhone"
+      )}
+    />
+  </div>
+</Field>
 
             <Field label="Business Address">
               <input

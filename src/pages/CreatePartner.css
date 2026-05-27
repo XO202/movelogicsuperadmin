@@ -554,3 +554,84 @@
     flex: 1;
   }
 }
+/* =========================================================
+   PHONE FIELD
+========================================================= */
+
+.cp-phone-wrapper {
+  display: flex;
+
+  border: 1px solid #1e2d45;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  background: #0d1525;
+}
+
+.cp-country-select-wrapper {
+  position: relative;
+
+  min-width: 100px;
+
+  border-right: 1px solid #1e2d45;
+
+  background: #131c2e;
+}
+
+.cp-country-select {
+  width: 100%;
+  height: 46px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #c9d1db;
+
+  font-size: 13.5px;
+
+  padding: 0 38px 0 14px;
+
+  appearance: none;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.cp-country-chevron {
+  position: absolute;
+
+  right: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8b95a8;
+
+  pointer-events: none;
+}
+
+.cp-phone-input {
+  flex: 1;
+
+  height: 46px;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 0 14px;
+
+  color: #c9d1db;
+
+  font-size: 13.5px;
+
+  outline: none;
+}
+
+.cp-phone-input::placeholder {
+  color: #6b7280;
+}

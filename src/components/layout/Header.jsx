@@ -5,7 +5,8 @@ import {
   IconChevronDown,
 } from "../common/Icons";
 import { IconMenu } from "../common/Icons";
-import "./Header.css"; 
+import "./Header.css";  
+import { Link } from "react-router-dom";
 function Header({
   setSidebarOpen,
 }) {
@@ -89,9 +90,11 @@ function Header({
         </div>
     
       </div>
-    <button className="dropdown-item logout-item">
-      Logout
-    </button>
+      <Link to="/login" className="back-link">
+        <button className="dropdown-item logout-item">
+          Logout
+        </button>
+    </Link>
   </div>
 </div>
       </div>
